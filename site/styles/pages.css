@@ -3,11 +3,12 @@
 }
 
 /*---------------------------------------------------------------------------*/
-/* Header/logo Title */
+/* Header: logo/title */
 .header {
   padding: 20px;
   text-align: center;
   color: white;
+  background-color: #ffcb3c;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -49,7 +50,7 @@
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: #1abc9c;
 }
 
 /* Dropdown content (hidden by default) */
@@ -83,13 +84,21 @@
 }
 
 /*---------------------------------------------------------------------------*/
+/* Image Style */
+img {
+  display: block;
+  max-width:600px;
+  width: auto;
+  height: auto;
+}
+
+/*---------------------------------------------------------------------------*/
 /* Body style */
 body {
   font: 10pt; 
   font-family: 'Roboto', sans-serif; 
-  color: #ffffff; 
-  background-color: #ffcb3c;}
-
+  color: #ffffff;
+}
 
 .row {  
   display: flex;
@@ -109,8 +118,6 @@ body {
   height: 200px;
   flex: 85%;
   padding: 20px;
-  background-color:#fff; 
-  opacity: 96%; 
   color:#000; 
 }
 
