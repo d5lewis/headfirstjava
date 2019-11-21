@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Head First Java</title>
+    <link rel="stylesheet" href="/styles/pages.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Headfirst Java</h1>
+      <h2>Laying down the <b>foundation</b> of the language.</h2>
+    </div>
+
+    <div class="navbar">
+      <div id="navbar"></div>
+    </div>
+    <script>$('#navbar').load('/resources/navbar.html');</script>
+    <h2 class="headline">What is Static Binding?</h2>
+    <p>
+      Static Binding: The binding which can be resolved at compile time by compiler is known as
+      static or early binding. Binding of all the static, private and final methods is done at 
+      compile-time.
+    </p>
+    <p class="innerp">
+      Point blank, static binding is just better performance wise. But that doesn't 
+      always ensure expected behavior.  What will the output of the below snippet be?
+    </p>
+    <img src="/media/staticbinding.png" alt="Static Binding Example">
+    <p>
+      Static binding is better for performance.  The compiler knows that all such methods cannot be 
+      overridden and will always be accessed by an object of the local class.
+    </p>
+    <p class="innerp">
+      We have created one object of subclass and one object of superclass both with the type superclass.
+      Since the print method of superclass is static, the compiler knows that it will not be overridden 
+      in subclasses and the superclass print method is called with no ambiguity.
+    </p>
+    <h2 class="headline">What is Dynamic Binding?</h2>
+    <p>
+      In Dynamic binding compiler doesn’t decide the method to be called. Overriding is a perfect 
+      example of dynamic binding. When overridding both parent and child classes have same method. 
+    </p>
+    <img src="/media/dynamicbinding.png" alt="Dynamic Binding Example">
+    <p>
+      The methods are not static in this code.  During compilation, the compiler has no idea as to which 
+      print has to be called since the compiler goes only by referencing variable not by type.  Therefore the binding 
+      would be delayed to runtime with the JVM making the decision.  This will be a bit slower of an implementation, 
+      but it allows for more flexibility in the programming.  
+    </p>
+    <p class="innerp">
+      Lesson learned: If we are sure they method will not be overridden, make it static or private to avoid binding 
+      at runtime (UX vs. DX paradigm)
+    </p>
+  </body>
+</html>

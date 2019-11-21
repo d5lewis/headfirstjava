@@ -5,7 +5,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <title>The First Section</title>
+    <title>Head First Java</title>
     <link rel="stylesheet" href="/styles/pages.css" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -13,45 +13,38 @@
   <body>
     <div class="header">
       <h1>Headfirst Java</h1>
-      <p>Laying down the <b>foundation</b> of the language.</p>
+      <h2>Laying down the <b>foundation</b> of the language.</h2>
     </div>
 
     <div class="navbar">
       <div id="navbar"></div>
     </div>
     <script>$('#navbar').load('/resources/navbar.html');</script>
-
-    <div class="row">
-      <div class="side">
-        <p>
-          Java works by placing a translator between the bytecode and the machine.  In theory, 
-          this allows us to write the code once, and compile it to a single bytecode source.  
-          The virtual machine then takes care of the heaving lifting to run that code on all 
-          machines.  
-        </p>
-        <p>
-          Java is open and "free."  Except that it isn't.  Oracle is suing Google over not properly
-          paying for licenses when writing the Android OS.  When asked in court whether or not 
-          Java is free, Larry Ellison CEO of Oracle answered "I don't know."
-        </p>
-        <p>
-          In theory, only one class is supposed to go inside each ".java" file.  However I don't think
-          this is a rule in practice, and might be more of a recommendation.  
-        </p>
-        <p>
-          Every Java application must have a main method, and this is what the JVM looks for to enter 
-          the application.  Every Java application can only have one main method.  This is per 
-          application, not per class.  
-        </p>
-      </div>
-      <div class="main">
-        <picture>
-            <img src="/media/theWayJavaWorks.png" alt="The Way Java Works">
-        </picture>
-        <picture>
-          <img src="/media/goesInClass.png" alt="One class per file">
-        </picture>
-      </div>
-    </div>
+    <p>
+      Java works by placing a translator between the bytecode and the machine.  In theory, 
+      this allows us to write the code once, and compile it to a single bytecode source.  
+      The virtual machine then takes care of the heaving lifting to run that code on all 
+      machines.  
+    </p>
+    <picture>
+      <img src="/media/theWayJavaWorks.png" alt="The Way Java Works">
+    </picture>}
+    <p>
+      Java is open and "free."  Except that it isn't.  Oracle is suing Google over not properly
+      paying for licenses when writing the Android OS.  When asked in court whether or not 
+      Java is free, Larry Ellison CEO of Oracle answered "I don't know."
+    </p>
+    <p>
+      In theory, only one class is supposed to go inside each ".java" file.  However I don't think
+      this is a rule in practice, and might be more of a recommendation.  
+    </p>
+    <p>
+      Every Java application must have a main method, and this is what the JVM looks for to enter 
+      the application.  Every Java application can only have one main method.  This is per 
+      application, not per class.  
+    </p>
+    <picture>
+      <img src="/media/goesInClass.png" alt="One class per file">
+    </picture>
   </body>
 </html>
