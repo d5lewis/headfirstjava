@@ -113,6 +113,12 @@ img {
   background-color: #ffcb3c;
 }
 
+.sublists {
+  width: 600px;
+  text-align: left; 
+  margin: 50px auto;
+}
+
 p {
   width: 900px;
   text-align: left; 

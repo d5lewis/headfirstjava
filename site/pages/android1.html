@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Android Portfolio</title>
+    <link rel="stylesheet" href="/styles/pages.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <h1>developer.android Tutorials</h1>
+      <h2>Laying down the <b>foundation</b> of Android App Development.</h2>
+    </div>
+    <div class="navbar">
+      <div id="navbar"></div>
+    </div>
+    <script>$('#navbar').load('/resources/navbar.html');</script>
+    <h2 class="headline">Sprinkle in some Android LLs</h2>
+    <p>
+      Android apps are built as a combination of components that can be invoked individually.  
+    </p>
+    <ul class="sublists">
+      <li>Activities are apps with a UI</li>
+      <li>
+        Broadcast receivers are components in your Android application that 
+        listen in on broadcast messages(or events) from different outlets: 
+        From other applications. From the system itself. From your application.
+      </li>
+      <li>Services allow the app to perform background tasks without a UI</li>
+    </ul>
+    <p>
+        Android apps can be written using Kotlin, Java, and C++ languages. The Android SDK 
+        tools compile your code along with any data and resource files into an APK, an Android 
+        package, which is an archive file with an .apk suffix. One APK file contains all the 
+        contents of an Android app and is the file that Android-powered devices use to install 
+        the app.
+    </p>
+    <p class="innerp">
+      Non-intuitive fact: Android OS is a multi-user Linux system and each app is considered a 
+      different user -- in their own sandboxed environment.   
+    </p>
+    <p>
+      The Android system implements the principle of least privilege. That is, each app, by default, 
+      has access only to the components that it requires to do its work and no more. This creates 
+      a very secure environment in which an app cannot access parts of the system for which it is not 
+      given permission. However, there are ways for an app to share data with other apps and for an app 
+      to access system services
+    </p>
+    <ul class="sublists">
+      <li>
+        It's possible to arrange for two apps to share the same Linux user ID, in which case they 
+        are able to access each other's files.
+      </li>
+      <li>
+        An app can request permission to access device data such as the device's location, camera, and Bluetooth 
+        connection. The user has to explicitly grant these permissions.
+      </li>
+      <li>
+        Content providers manage a shared set of app data that you can store in the file system, in a SQLite 
+        database, on the web, or on any other persistent storage location that your app can access
+      </li>
+    </ul>
+  </body>
+</html>
