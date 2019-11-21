@@ -22,28 +22,28 @@
     <script>$('#navbar').load('/resources/navbar.html');</script>
     <h2 class="headline">What is Static Binding?</h2>
     <p>
-      Static Binding: The binding which can be resolved at compile time by compiler is known as
-      static or early binding. Binding of all the static, private and final methods is done at 
+      Static Binding: The type of binding which can be resolved at compile time is known as
+      static or early binding. Binding of all the static, private, and final methods is done at 
       compile-time.
     </p>
     <p class="innerp">
-      Point blank, static binding is just better performance wise. But that doesn't 
+      Point blank, static binding is just better for performance. But that doesn't 
       always ensure expected behavior.  What will the output of the below snippet be?
     </p>
     <img src="/media/staticbinding.png" alt="Static Binding Example">
     <p>
-      Static binding is better for performance.  The compiler knows that all such methods cannot be 
+      Static binding is better for performance.  The compiler assumes that all such methods cannot be 
       overridden and will always be accessed by an object of the local class.
     </p>
     <p class="innerp">
       We have created one object of subclass and one object of superclass both with the type superclass.
       Since the print method of superclass is static, the compiler knows that it will not be overridden 
-      in subclasses and the superclass print method is called with no ambiguity.
+      in the subclasses and the superclass print method is called with no ambiguity.
     </p>
     <h2 class="headline">What is Dynamic Binding?</h2>
     <p>
-      In Dynamic binding compiler doesn’t decide the method to be called. Overriding is a perfect 
-      example of dynamic binding. When overridding both parent and child classes have same method. 
+      In Dynamic binding, the compiler doesn’t decide the method to be called. Overriding is a perfect 
+      example of dynamic binding. When overridding both parent and child classes have the same method. 
     </p>
     <img src="/media/dynamicbinding.png" alt="Dynamic Binding Example">
     <p>
