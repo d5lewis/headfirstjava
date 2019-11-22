@@ -11,6 +11,14 @@
   background-color: #ffcb3c;
 }
 
+.header h1 {
+  font-size: x-large;
+}
+
+.header h2 {
+  font-size: medium;
+}
+
 /*---------------------------------------------------------------------------*/
 /* Nav Bar */
 .navbar {
@@ -86,10 +94,18 @@
 /*---------------------------------------------------------------------------*/
 /* Body style */
 body {
-  font: 10pt; 
+  font-size: 10pt; 
   font-family: 'Roboto', sans-serif; 
   color: #000;
 }
+
+
+p {
+  width: 900px;
+  text-align: left; 
+  margin: 0px auto;
+}
+
 
 img {
   display: block;
@@ -99,13 +115,16 @@ img {
   margin: 50px auto;
 }
 
-
+/*---------------------------------------------------------------------------*/
+/* Headlines */
 .headline {
   width: 900px;
   text-align: center; 
   margin: 50px auto;
 }
 
+/*---------------------------------------------------------------------------*/
+/* Block quotes */
 .innerp {
   width: 600px;
   text-align: left; 
@@ -113,14 +132,14 @@ img {
   background-color: #ffcb3c;
 }
 
+/*---------------------------------------------------------------------------*/
+/* Sublists */
 .sublists {
   width: 600px;
   text-align: left; 
   margin: 50px auto;
 }
 
-p {
-  width: 900px;
-  text-align: left; 
-  margin: 0px auto;
+.sublists h2 {
+  font-size: medium;
 }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Android Portfolio</title>
+    <link rel="stylesheet" href="/styles/pages.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <h1>developer.android Tutorials</h1>
+      <h2>Laying down the <b>foundation</b> of Android App Development.</h2>
+    </div>
+    <div class="navbar">
+      <div id="navbar"></div>
+    </div>
+    <script>$('#navbar').load('/resources/navbar.html');</script>
+    <h2 class="headline">Android App Manifest</h2>
+    <p>
+      Every app project must have an AndroidManifest.xml file (with precisely that name) at 
+      the root of the project source set. The manifest file describes essential information 
+      about your app to the Android build tools, the Android operating system, and Google Play.
+    </p>
+    <ul class="sublists">
+      <h2>The manifest file must:</h2>
+      <li>
+        Declare the applications package name which conventionally matches the code namespace
+      </li>
+      <li>
+        Declare the components of the app, which include all activities, services, broadcast receivers, 
+        and content providers. Each component must define basic properties such as the name 
+        of its Java class. It can also declare capabilities such as which device configurations 
+        it can handle, and intent filters that describe how the component can be started.
+      </li>
+      <li>
+        Declare the permissions that the app needs in order to access protected parts of the system or 
+        other apps. It also declares any permissions that other apps must have if they want to access content from this app.
+      </li>
+      <li>
+        Declare the hardware and software features the app requires which affects which devices can 
+        install the app from Google Play.  
+      </li>
+    </ul>
+    <p>
+      If you're using Android Studio to build your app, the manifest file is created for you, and most of the essential 
+      manifest elements are added as you build your app
+    </p>
+
+  </body>
+</html>
