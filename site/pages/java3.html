@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Java Portfolio</title>
+    <link rel="stylesheet" href="/styles/pages.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Headfirst Java</h1>
+      <h2>Laying down the <b>foundations</b> of the language.</h2>
+    </div>
+
+    <div class="navbar">
+      <div id="navbar"></div>
+    </div>
+    <script>$('#navbar').load('/resources/navbar.html');</script>
+    <h2 class="headline">What is this Context and Dependency Injection (CDI) thing?</h2>
+    <p>
+      Contexts and Dependency Injection (CDI) enables your objects to have their dependencies provided 
+      to them automatically, instead of creating them or receiving them as parameters. CDI also manages 
+      the lifecycle of those dependencies for you.
+    </p>    
+    <ul class="sublists">
+      <h2>The fundamental services provided by CDI are:</h2>
+      <li>
+        Contexts: This service enables you to bind the lifecycle and interactions of stateful components
+        to well-defined but extensible lifecycle contexts.
+      </li>
+      <li>
+        Dependency injection: This service enables you to inject components into an application in a typesafe
+        way and to choose at deployment time which implementation of a particular interface to inject.
+      </li>
+      <h2>But CDI also provides many other services:</h2>
+      <li>
+        Integration with the Expression Language (EL), which allows any component to be used directly within 
+        a JavaServer Faces page or a JavaServer Pages page
+      </li>
+      <li>
+        The ability to decorate injected components
+      </li> 
+      <li>
+        The ability to associate interceptors with components using typesafe interceptor bindings
+      </li>
+      <li> 
+        An event-notification mode
+      </li>
+      <li>
+        A web conversation scope in addition to the three standard scopes (request, session, and application) 
+        defined by the Java Servlet specification
+      </li>
+      <li>
+        A complete Service Provider Interface (SPI) that allows third-party frameworks to integrate cleanly 
+        in the Java EE 7(+?) environment
+      </li>
+    </ul>
+    <h2 class="headline"> What does all of this mean? </h2>
+    <p class="innerp">
+      By utilizing Java CDI, we are no long in control of when methods get called and how long
+      they are saved in memory.  
+    </p>
+  </body>
+</html>
