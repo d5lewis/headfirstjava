@@ -32,30 +32,38 @@
     </p>
     <img src="/media/staticbinding.png" alt="Static Binding Example">
     <p>
-      Static binding is better for performance.  The compiler assumes that all such methods cannot be 
-      overridden and will always be accessed by an object of the local class.
+      Static binding is better for performance.  The compiler assumes that all such methods 
+      cannot be overridden and will always be accessed by an object of the local class.
     </p>
     <p class="innerp">
-      We have created one object of subclass and one object of superclass both with the type superclass.
-      Since the print method of superclass is static, the compiler knows that it will not be overridden 
-      in the subclasses and the superclass print method is called with no ambiguity.
+      We have created one object of subclass and one object of superclass both with the type
+      superclass. Since the print method of superclass is static, the compiler knows that it 
+      will not be overridden in the subclasses and the superclass print method is called with
+      no ambiguity.
     </p>
     <h2 class="headline">What is Dynamic Binding?</h2>
     <p>
-      In Dynamic binding, the compiler doesn’t decide the method to be called. Overriding is a perfect 
-      example of dynamic binding. When overridding both parent and child classes have the same method. 
+      In Dynamic binding, the compiler doesn’t decide the method to be called. Overriding is 
+      a perfect example of dynamic binding. When overridding both parent and child classes have 
+      the same method. 
     </p>
     <img src="/media/dynamicbinding.png" alt="Dynamic Binding Example">
     <p>
-      The methods are not static in this code.  During compilation, the compiler has no idea as to which 
-      print has to be called since the compiler goes only by referencing variable not by type.  Therefore the binding 
-      would be delayed to runtime with the JVM making the decision.  This will be a bit slower of an implementation, 
-      but it allows for more flexibility in the programming.  
+      The methods are not static in this code.  During compilation, the compiler has no idea
+      as to which print has to be called since the compiler goes only by referencing variable
+      not by type.  Therefore the binding would be delayed to runtime with the JVM making the 
+      decision.  This will be a bit slower of an implementation, but it allows for more 
+      flexibility in the programming.  
     </p>
     <p class="innerp">
-      Lesson learned: If we are sure they method will not be overridden, make it static or private to avoid binding 
-      at runtime (UX vs. DX paradigm)
+      Lesson learned: If we are sure they method will not be overridden, make it static or private
+      to avoid binding at runtime (UX vs. DX paradigm)
     </p>
-    </body>
+    <h2 class="headline">What happens when the classes are static, but the print method isn't?</h2>
+    <img src="/media/staticish_binding.png" alt="Static/Dynamic Binding Example">
+    <p>
+      In this example, even though both super and subclass are static, and the print methods are
+      static, the subclass method is called when it is from a class of type subclass.      
+    </p>
   </body>
 </html>

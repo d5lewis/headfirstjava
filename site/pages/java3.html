@@ -22,55 +22,21 @@
     <script>$('#navbar').load('/resources/navbar.html');</script>
     <h2 class="headline">What is this Context and Dependency Injection (CDI) thing?</h2>
     <p>
-      Contexts and Dependency Injection (CDI) enables your objects to have their dependencies provided 
-      to them automatically, instead of creating them or receiving them as parameters. CDI also manages 
-      the lifecycle of those dependencies for you.
+      Contexts and Dependency Injection (CDI) enables your objects to have their dependencies
+      provided to them automatically, instead of creating them or receiving them as parameters. 
+      CDI also manages the lifecycle of those dependencies for you.
     </p>    
-    <ul class="sublists">
-      <h2>The fundamental services provided by CDI are:</h2>
-      <li>
-        Contexts: This service enables you to bind the lifecycle and interactions of stateful components
-        to well-defined but extensible lifecycle contexts.
-      </li>
-      <li>
-        Dependency injection: This service enables you to inject components into an application in a typesafe
-        way and to choose at deployment time which implementation of a particular interface to inject.
-      </li>
-      <h2>But CDI also provides many other services:</h2>
-      <li>
-        Integration with the Expression Language (EL), which allows any component to be used directly within 
-        a JavaServer Faces page or a JavaServer Pages page
-      </li>
-      <li>
-        The ability to decorate injected components
-      </li> 
-      <li>
-        The ability to associate interceptors with components using typesafe interceptor bindings
-      </li>
-      <li> 
-        An event-notification mode
-      </li>
-      <li>
-        A web conversation scope in addition to the three standard scopes (request, session, and application) 
-        defined by the Java Servlet specification
-      </li>
-      <li>
-        A complete Service Provider Interface (SPI) that allows third-party frameworks to integrate cleanly 
-        in the Java EE 7(+?) environment
-      </li>
     </ul>
     <h2 class="headline"> What does all of this mean? </h2>
     <img src="/media/manualcdi.png" alt="Manual CDI Example">
     <img src="/media/autocdi.png" alt="Automatic CDI Example">
     <p>
-      By utilizing Java CDI, we are no long in control of when methods get called and how long
+      By utilizing Java CDI, we are no longer in control of when methods get called and how long
       they are saved in memory.  Utilizing the CDI framework provides instances of objects
-      needed by other objects (called injection).  This is done at run-time.  
+      needed by other objects (called injection) at run-time.  
     </p>
     <p class="innerp">
-      The benefits of CDI are looser coupling, easier unit testing, and most extensible code. 
+      The benefits of CDI are looser coupling, easier unit testing, and more extensible code. 
     </p>
-    
-    
   </body>
 </html>

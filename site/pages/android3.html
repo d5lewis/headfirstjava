@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Android Portfolio</title>
+    <link rel="stylesheet" href="/styles/pages.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <h1>developer.android Tutorials</h1>
+      <h2>Laying down the <b>foundation</b> of Android App Development.</h2>
+    </div>
+    <div class="navbar">
+      <div id="navbar"></div>
+    </div>
+    <script>$('#navbar').load('/resources/navbar.html');</script>
+    <h2 class="headline">Is Android a JVM?</h2>
+    <p>
+      It isn't.  
+      <br><br>
+      For the Java Platform, Java Bytecode is executed by the Java Virtual Machine.  The compiler
+      converts source code written in the Java Programming Language, or any other JVM language, into
+      bytecode for the JVM.
+      <br><br>
+      For Android, the compiler converts source code written in the Java Programming Language into
+      bytecode for the Dalvik Virtual Machine.
+      <br><br>
+      Android does not have a JVM.  The JVM and DVM work in entirely different ways.  
+      One is a stack-based (the JVM) system, the other is a register based (the DVM) system.
+      <br><br>
+      On newer Androids, the new Android Runtime (ART) replaces the Dalvik Virtual Machine. 
+      This technically isn't a virtual machine anymore as it pre-compiles and builds the
+      code into native ELF executables upon install. This is done improve load and run
+      times by using native code.
+    </p>
+    <h2 class="headline">What is a Dalvik Virtual Machine?</h2>
+    <p>
+      Unlike Java Virtual Machines, which are stack machines, the Dalvik VM uses a register-based 
+      architecture that requires fewer, typically more complex, virtual machine instructions. Dalvik 
+      programs are written in Java using the Android application programming interface (API), compiled 
+      to Java bytecode, and converted to Dalvik instructions as necessary.
+      <br><br>
+      A tool called dx is used to convert Java .class files into the .dex format. Multiple classes are 
+      included in a single .dex file. Duplicate strings and other constants used in multiple class files 
+      are included only once in the .dex output to conserve space. Java bytecode is also converted into an 
+      alternative instruction set used by the Dalvik VM. An uncompressed .dex file is typically a few 
+      percent smaller in size than a compressed Java archive (JAR) derived from the same .class files
+    </p>
+    <h2 class="headline">What is the Android Runtime?</h2>
+    <p>
+      The successor of Dalvik is Android Runtime (ART), which uses the same bytecode and .dex files
+      (but not .odex files), with the succession aiming at performance improvements transparent to 
+      the end users. The new runtime environment was included for the first time in Android 4.4 "KitKat" 
+      as a technology preview, and replaced Dalvik entirely in later versions; Android 5.0 "Lollipop" 
+      is the first version in which ART is the only included runtime.
+    </p>
+
+  </body>
+</html>
