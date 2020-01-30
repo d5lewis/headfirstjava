@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Java Portfolio</title>
+    <link rel="stylesheet" href="/styles/pages.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Headfirst Java</h1>
+      <h2>Laying down the <b>foundations</b> of the language.</h2>
+    </div>
+
+    <div class="navbar">
+      <div id="navbar"></div>
+    </div>
+    <script>$('#navbar').load('/resources/navbar.html');</script>
+    <h2 class="headline">Primitive Types</h2>
+    <p>
+      There are primitive types like long, int short, byte, float and double.  Then there are 
+      types that are references to objects.  
+    </p>
+    <p>
+      The names must start with a letter, underscore, or dollar sign.  Note: it cannot start 
+      with a number.  Cannot be a key word.  
+    </p>    
+    <h2 class="headline">Objects</h2>
+    <p>
+      There are no such things as object variables, only references to objects... Which makes it 
+      sound like everything is a pointer.  
+    </p>
+    <p>
+      The names must start with a letter, underscore, or dollar sign.  Note: it cannot start 
+      with a number.  Cannot be a key word.
+    </p> 
+    <p>
+      If the keyword 'final' is used, the object cannot be changed to references something else.  
+      Without it, any object can be assigned as a different version of that same type of object.  
+    </p>
+    <p>
+      After use, if an object is ever intentionally assigned null, it is eligible for garbage collection. 
+    </p>
+    <p class="innerp">
+      Can I do pointer arithmetic like C?  Nope.  Java is not C.  But maybe the JVM does do this
+      behind the scenes, but we cannot be sure.   
+    </p>
+    <img src="/media/heap_pointers.png" alt="Heap Pointer Behavior"> 
+  </body>
+</html>
