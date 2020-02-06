@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Java Portfolio</title>
+    <link rel="stylesheet" href="/styles/pages.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Questions and Answers</h1>
+      <h2>This is a space where questions are inventoried and answers are attempted</h2>
+    </div>
+
+    <div class="navbar">
+      <div id="navbar"></div>
+    </div>
+    <script>$('#navbar').load('/resources/navbar.html');</script>
+    <h2 class="headline">Register Based Architecture vs. Stack Based</h2>
+    <p>
+      <b>Question:</b> What is the difference between register based and stacked based architecture
+      as it pertains to the Android operating system?  
+    </p>
+    <p>
+      <b>Answer:</b> Stack-based Virtual Machines have the memory structure of the type Stack.
+      Register-based uses registers of the CPU to store the operands. So along with the operands, their 
+      address is also stored.
+      <br><br>
+      A Register based model does not require any pushing and popping of instructions. 
+      Hence instructions execute faster.
+      <br><br>
+      Register-based models are good at optimizing as well. They can store common sub-expression results 
+      which can be used again in the future without the need to calculate. This is not possible in a 
+      Stack-based model.
+    </p>    
+    <h2 class="headline">Java 2.0?</h2>
+    <p>
+      <b>Question:</b> Is there a Java 2.0 (backwards compatibility breaking) planned release?   
+    </p>
+    <p>
+      <b>Answer:</b> Both version numbers "1.5.0" and "5.0" are used to identify this release of the 
+      Java 2 Platform Standard Edition. Version "5.0" is the product version, while "1.5.0" is the 
+      developer version. The number "5.0" is used to better reflect the level of maturity, stability, 
+      scalability and security of the J2SE.
+      <br><br>
+      In other words, Java/Oracle turned their backs on industry standard versioning at version 1.5 "5"
+      for marketing purposes 
+    </p> 
+    <h2 class="headline">What happens when we increment references?</h2>
+    <img src="/media/increment_pointer.png" alt="Java Error Incrementing Pointers">
+    <p>
+      The answer is nothing because it wont compile.  But according to SO, if we use foreach loops, 
+      the compiler/JVM will optimize what is happening on the inside to give us the C++ equivalent of
+      incrementing pointers.   
+      <br><br>
+      I also tried to cast to an integer, and the compiler yelled the types were incompatible. 
+      <img src="/media/increment_pointer_int.png" alt="Java Error Incrementing Pointers"> 
+    </p> 
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Java Portfolio</title>
+    <link rel="stylesheet" href="/styles/pages.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Headfirst Java</h1>
+      <h2>Laying down the <b>foundations</b> of the language.</h2>
+    </div>
+
+    <div class="navbar">
+      <div id="navbar"></div>
+    </div>
+    <script>$('#navbar').load('/resources/navbar.html');</script>
+    <h2 class="headline">Arrays</h2>
+    <p>
+      Arrays are always objects.  They act just like arrays in C/C++ in the way that elements
+      can be indexed and accessed, but even arrays of primitive types are objects.  
+      <br><br>
+      An array of objects is an array of references to those objects.  The objects still need 
+      to be created separately. This results in a RTE:
+    </p>
+    <img src="/media/print_fail.png" alt="Print Fail">
+    <p>
+      When the pre-created print call is cleaned up:
+    </p>
+    <img src="/media/print_pass.png" alt="Print Pass">
+    <p>
+      Interestingly, this wont work in a foreach construct, which according to a guy on SO that
+      said he was referencing the java docs, is the preferred way to loop over an array.  
+      <br><br>
+      It appears the error has something to do with 'sc' becoming the value at that location in 
+      the array, which as we know from before, was never really assigned.
+    </p>
+    <img src="media/print_fail2.png" alt="Print Fail foreach">
+    <h2 class="headline">The Finally Block</h2>
+    <p>
+      The finally block always executes when the try block exits. This ensures that the finally
+      block is executed even if an unexpected exception occurs.
+      <br><br>
+      The official Java documentation stats the finally block is useful for more
+      than just exception handling — it allows the programmer to avoid having cleanup code
+      accidentally bypassed by a return, continue, or break. Putting cleanup code in a finally 
+      block is always a good practice, even when no exceptions are anticipated.
+    </p>   
+    <p class="innerp">
+      <b>Note:</b> If the JVM exits while the try or catch code is being executed, then the finally
+      block may not execute. Likewise, if the thread executing the try or catch code is interrupted 
+      or killed, the finally block may not execute even though the application as a whole continues.   
+    </p> 
+    <p class="innerp">
+      <b>Important:</b> The finally block is a key tool for preventing resource leaks. When closing
+      a file or otherwise recovering resources, place the code in a finally block to ensure that
+      resource is always recovered.
+    </p>
+  </body>
+</html>
