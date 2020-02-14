@@ -122,6 +122,14 @@ img {
   margin: 50px auto;
 }
 
+.headline h2 {
+  font-size: xx-large;
+}
+
+.headline h3 {
+  font-size: large;
+}
+
 /*---------------------------------------------------------------------------*/
 /* Block quotes */
 .innerp {
