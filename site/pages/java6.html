@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Java Portfolio</title>
+    <link rel="stylesheet" href="/styles/pages.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Headfirst Java</h1>
+      <h2>Laying down the <b>foundations</b> of the language.</h2>
+    </div>
+
+    <div class="navbar">
+      <div id="navbar"></div>
+    </div>
+    <script>$('#navbar').load('/resources/navbar.html');</script>
+    <h2 class="headline">Arrays</h2>
+    <p>
+      A non-primitive variable holds a reference to an object, not the object itself. 
+      Objects live on heap.  If a local variable is a reference to an object, only
+      the variable (the reference) goes on the stack, the object itself still lives 
+      on the heap.  
+    </p>
+    <p>
+      All local variables live on the stack in the frame corresponding to the method
+      where the variables are declared.  
+    </p>
+    <h2 class="headline">While we're at it, some notes on Object creation</h2>
+    <p>
+      Usually, the compiler will create a no-arg constructor for you if you don't 
+      implement one yourself.  However, if we implement a constructor with arguments,
+      this is not the case, and the code will not compile.  So if you create a 
+      constructor of any kind, you need to also create the default, no-arg constructor
+      if it would ever be used.  
+    </p>
+    <p>
+      Furthermore, if you have more than one constructor in a class, the constructors 
+      must have different argument lists.  Even a change as small as re-ordering the 
+      arguments is enough to be a different constructor, but it seems to me like this 
+      would be poor practice.  
+    </p>
+    <p>
+      All the constructors in an objects inheritance tree must run when you make a new 
+      object.  This means every superclass has a constructor that is called all the 
+      way up the call chain, before the sub-classes constructor is called. If variables
+      need to be passed to the super constructor, super must be called on the first line
+      of the sub-class's constructor.   
+    </p>
+    <p>
+      Even abstract classes have constructors that are called when a sub-class is 
+      instantiated. 
+    </p>
+    <p>
+      If your constructor is marked private, you can never make an instance of that 
+      class. In the standard library, Math is built this way.   
+    </p>
+    <p>
+      Note: Use the keyword static to get as close as Javaly possible to global methods/
+      variables.  These methods can be run without creating an instance of a class.  
+    </p>
+    <h2 class="headline"> And finally, some notes about Object deletion.</h2>
+    <h3 class="headline"> There are three ways an object is marked for Garbage Collection:</h3>
+    <ul class="sublists">
+      <li>
+        When a reference to an object goes out of scope.
+      </li>
+      <li>
+        When a reference to an object is assigned to another object.
+      </li>
+      <li>
+        When a reference to an object is set to null. 
+      </li>
+    </ul>
+  </body>
+</html>

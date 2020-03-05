@@ -58,7 +58,31 @@
       incrementing pointers.   
       <br><br>
       I also tried to cast to an integer, and the compiler yelled the types were incompatible. 
-      <img src="/media/increment_pointer_int.png" alt="Java Error Incrementing Pointers"> 
+      
     </p> 
+    <img src="/media/increment_pointer_int.png" alt="Java Error Incrementing Pointers"> 
+    <h2 class="headline"> The finally block without a catch</h2>
+    <p>
+      Below is an example of using a finally block to clean up resources even if 
+      there is no catch statement.  The finally block will always run if an uncaught 
+      exception is thrown, but the rest of the code in the method will be skipped.
+
+      So if you put clean-up code after the finally block, it won't get called if 
+      there is an uncaught exception.
+    </p>
+    <p>
+      The finally block is executed no matter how the try block terminates, including:
+      <ul>
+        <li>When the try block drops off the end</li>
+        <li>
+          When it throws an exception ... irrespective of whether the exception is caught 
+          at this level
+        </li>
+        <li>Or when it executes a return, continue or break</li>
+      </ul>
+      In fact, the only cases where the finally block does not execute are if the try 
+      block calls System.exit() or the JVM crashes. (Or if it goes into an infinite loop ...)
+    </p>
+    <img src="/media/finally.png" alt="Finally Block Example">
   </body>
 </html>
